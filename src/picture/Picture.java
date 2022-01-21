@@ -43,7 +43,7 @@ public class Picture {
    * @param x the x co-ordinate of the point
    * @param y the y co-ordinate of the point
    * @return <tt>true</tt> if the point lies within the boundaries of the picture, <tt>false</tt>
-   * otherwise.
+   * * otherwise.
    */
   public boolean contains(int x, int y) {
     return x >= 0 && y >= 0 && x < getWidth() && y < getHeight();
@@ -214,6 +214,7 @@ public class Picture {
       case "90" -> rotate90().saveAs(filepath);
       case "180" -> rotate90().rotate90().saveAs(filepath);
       case "270" -> rotate90().rotate90().rotate90().saveAs(filepath);
+      default -> throw new IllegalArgumentException("Invalid input angle.");
     }
   }
 
@@ -233,6 +234,7 @@ public class Picture {
     switch (type) {
       case "H" -> flipH().saveAs(filepath);
       case "V" -> flipV().saveAs(filepath);
+      default -> throw new IllegalArgumentException("Invalid flip type input.");
     }
   }
 

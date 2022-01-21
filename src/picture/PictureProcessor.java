@@ -34,6 +34,7 @@ public class PictureProcessor {
         Picture picture5 = new Picture(args[1]);
         picture5.blur(args[2]);
       }
+      default -> throw new IllegalArgumentException("Invalid input command.");
     }
   }
 }
