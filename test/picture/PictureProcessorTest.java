@@ -34,7 +34,7 @@ public class PictureProcessorTest {
   }
 
   @Test
-   public void grayscaleRainbow() throws IOException {
+  public void grayscaleRainbow() throws IOException {
     Assert.assertEquals(
         new Picture("images/rainbowGS64x64doc.png"),
         TestSuiteHelper.runMain(tmpFolder, "grayscale", "images/rainbow64x64doc.png"));
